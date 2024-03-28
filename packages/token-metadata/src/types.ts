@@ -104,6 +104,26 @@ export interface IbcTokenMetaWithSource extends IbcTokenMeta {
   source?: TokenSource
 }
 
+export interface TokenMetaNew {
+  name: string
+  logo: string
+  symbol: string
+  denom: string
+  isNative: boolean
+  decimals: number
+  source: TokenSource
+  coinGeckoId: string
+  tokenType: TokenType
+  tokenVerification: TokenVerification
+}
+
+export interface IbcTokenMetaNew extends TokenMetaNew {
+  hash: string
+  path: string
+  channelId: string
+  baseDenom: string
+}
+
 export interface TokenMetaBase {
   name?: string
   logo?: string
